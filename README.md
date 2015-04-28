@@ -4,7 +4,8 @@ This is some example code to help with debugging Node-Red application flows.
 
 To use it, you need a flow to output a webpage on "/debug", a subflow that outputs 
 the msg object to MQTT, an MQTT broker that supports access over websockets 
-(e.g. Mosquitto compiled with websockets or Mosca) and access to JQuery, Paho (MQTT web client) and the jquery-animate-shadow
+(e.g. Mosquitto compiled with websockets or Mosca) and access to JQuery, Paho (MQTT web client) and the
+[jquery-animate-shadow](http://www.bitstorm.org/jquery/shadow-animation/)
 plugin for consumption in the web page.
 
 - [Subflow](Web_Debug_Subflow.md). This adds a "DEBUG/" prefix to the msg.topic and outputs to MQTT.
