@@ -7,8 +7,10 @@ the msg object to MQTT, an MQTT broker that supports access over websockets
 (e.g. Mosquitto compiled with websockets or Mosca) and access to JQuery, Paho (MQTT web client) and the jquery-animate-shadow
 plugin for consumption in the web page.
 
-- Subflow. This adds a "DEBUG/" prefix to the msg.topic and outputs to MQTT.
-- Page Flow. This listens for and outputs a web page on "/debug".
+- [Subflow](Web_Debug_Subflow.md). This adds a "DEBUG/" prefix to the msg.topic and outputs to MQTT.
+  ![web_debug_subflow](https://cloud.githubusercontent.com/assets/1591850/7382163/85713a06-ee03-11e4-959f-026a14b09309.png)
+- [Page Flow](Debug_Page_Flow.md). This listens for and outputs a web page on "/debug".
+  ![debug_page_flow](https://cloud.githubusercontent.com/assets/1591850/7382150/5bcb12b2-ee03-11e4-8903-1bc3e2619631.png)
 
 The resulting web page will be initially blank except for a title. However, it will be listening for output
 from your MQTT broker on the "DEBUG/#" topic. Any recieved output will be dumped into an appropriate section element.
