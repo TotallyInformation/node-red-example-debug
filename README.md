@@ -21,3 +21,10 @@ Some JQuery animation magic can also be used to highlight which topic has just b
 
 The output of the message is formatted using the JavaScript JSON.stringify function if it is valid JSON, otherwise it is
 treated as a simple string.
+
+## Dependencies
+
+- JQuery (Used from cdnjs in the code given)
+- jquery.animate-shadow-min.js, a JQuery library
+- [mqttws31.js](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.javascript.git/plain/src/mqttws31.js), the Paho client library
+- I've also used modernizer.js to support older browsers and detect mobile browsers. This probably isn't needed.
