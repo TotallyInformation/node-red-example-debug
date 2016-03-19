@@ -22,6 +22,8 @@ Some JQuery animation magic can also be used to highlight which topic has just b
 The output of the message is formatted using the JavaScript JSON.stringify function if it is valid JSON, otherwise it is
 treated as a simple string.
 
+You have probably realised that the Page Flow could easily be simplified. It is this structure because I took it from another set of flows that I use to allow [dynamic form updates](https://github.com/TotallyInformation/node-red-example-liveupdates).
+
 ## Dependencies
 
 - JQuery (Used from cdnjs in the code given)
