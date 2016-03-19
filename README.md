@@ -30,3 +30,18 @@ You have probably realised that the Page Flow could easily be simplified. It is 
 - jquery.animate-shadow-min.js, a JQuery library
 - [mqttws31.js](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.javascript.git/plain/src/mqttws31.js), the Paho client library
 - I've also used modernizer.js to support older browsers and detect mobile browsers. This probably isn't needed.
+
+## Configuration
+
+This example needs a few local files as shown in Dependencies above. You need to put these in a place that Express (the web server that Node-Red uses behind the scenes) will find them and serve them up a "static" files for you.
+
+To do this, assuming you have the recommended install on a Raspberry Pi, create a folder:
+
+    /home/pi/.nodered/public
+Adjust things according to your installation. Put the static files such as mqttws31.js in that folder or a subfolder of it (I tend to split things up into `js`, `css` and `images` folders.
+
+Then edit the `settings.js` file that should be in `/home/pi/.nodered` unless you've moved things around. Add the following:
+
+    httpStatic: '/home/pi/.nodered/public',
+    
+You can quickly test this is correct by putting a simple html file (e.g. `blah.html`) into the public folder and calling the URL `http://localhost:1880/blah.html`. You should see your html rendered into the browser.
